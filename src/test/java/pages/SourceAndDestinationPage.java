@@ -1,7 +1,9 @@
 package pages;
 //Importing packages
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -20,24 +22,31 @@ public class SourceAndDestinationPage extends BaseClass {
     }
 
     // Storing required MakeMyTrip web elements
-    public static final By FROM = By.id("fromCity");
-    public static final By TO = By.id("toCity");
-    public static final By TEXT_TO = By.xpath("(//input[@aria-autocomplete='list'])[position()=2]");
+    public static final By HANDLE_POPUP = By.xpath("//li[@class='makeFlex hrtlCenter font10 makeRelative lhUser userLoggedOut']");
+    public static final By FROM = By.xpath("//input[@id='fromCity']");
+    public static final By FROM_TEXT_FIELD = By.xpath("//input[@class='react-autosuggest__input react-autosuggest__input--open']");
+    public static final By FROM_LABLE = By.xpath("//div[@class='fsw_inputBox searchCity inactiveWidget ']/label/input");
+    public static final By LIST_ITEM_FROM = By.xpath("//li[@id='react-autowhatever-1-section-0-item-0']");
+    public static final By TO = By.xpath("//input[@id='toCity']");
+    public static final By TO_TEXT_FIELD = By.xpath("//div[@class='react-autosuggest__container react-autosuggest__container--open']/input");
+    public static final By LIST_ITEM_TO = By.xpath("(//div[@class='makeFlex hrtlCenter']/div/p[1])[position()=1]");
 
 
 
     public void sendSourcePlace(String sourcePlace, WebDriver driver) {
         try {
+            Thread.sleep(5000);
+            driver.findElement(HANDLE_POPUP).click();
             waitForExpectedElement(driver, FROM);
             driver.findElement(FROM).click();
-            driver.findElement(FROM).clear();
-            driver.findElement(FROM).sendKeys(sourcePlace);
-            // Wait for 2 Seconds
-            Thread.sleep(2000);
-            driver.findElement(FROM).sendKeys(Keys.ARROW_DOWN);
-            // Wait for 2 Seconds
-            Thread.sleep(2000);
-            driver.findElement(FROM).sendKeys(Keys.ENTER);
+            Thread.sleep(5000);
+            waitForExpectedElement(driver, FROM_TEXT_FIELD);
+            driver.findElement(FROM_TEXT_FIELD).sendKeys(sourcePlace);
+            waitForExpectedElement(driver, LIST_ITEM_FROM);
+            Thread.sleep(5000);
+            driver.findElement(LIST_ITEM_FROM).click();
+            Thread.sleep(5000);
+
         } catch (Exception e) {
             e.getMessage();
         }
@@ -47,9 +56,10 @@ public class SourceAndDestinationPage extends BaseClass {
     public String getTextFromSource(WebDriver driver) {
         String source = null;
         try {
-            waitForExpectedElement(driver, TO);
-            WebElement textbox = driver.findElement(TO);
-            source = textbox.getAttribute("value");
+            waitForExpectedElement(driver, FROM);
+            WebElement sourceTextField = driver.findElement(FROM_LABLE);
+            source = sourceTextField.getAttribute("value");
+            //source = textbox.getText();
         } catch (Exception e) {
             e.getMessage();
         }
@@ -60,28 +70,25 @@ public class SourceAndDestinationPage extends BaseClass {
         try {
             waitForExpectedElement(driver, TO);
             driver.findElement(TO).click();
-            driver.findElement(TO).clear();
-            driver.findElement(TO).sendKeys(destinationPlace);
-            // Wait for 2 Seconds
-            Thread.sleep(2000);
-            driver.findElement(TO).sendKeys(Keys.ARROW_DOWN);
-            // Wait for 2 Seconds
-            Thread.sleep(2000);
-            driver.findElement(TO).sendKeys(Keys.ENTER);
+            Thread.sleep(5000);
+            driver.findElement(TO_TEXT_FIELD).sendKeys(destinationPlace);
+            Thread.sleep(3000);
+            driver.findElement(LIST_ITEM_TO).click();
+            Thread.sleep(30000);
         } catch (Exception e) {
             e.getMessage();
         }
     }
 
     public String getTextFromDestination(WebDriver driver) {
-        String source = null;
+        String destination = null;
         try {
             waitForExpectedElement(driver, TO);
-            WebElement textbox = driver.findElement(TO);
-            source = textbox.getAttribute("value");
+            WebElement destinationtTextField = driver.findElement(TO);
+            destination = destinationtTextField.getAttribute("value");
         } catch (Exception e) {
             e.getMessage();
         }
-        return source;
+        return destination;
     }
 }
