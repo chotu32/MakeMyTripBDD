@@ -61,3 +61,7 @@
 2022-02-06 18:40:01,659 [main] INFO StepDef.SourceAndDestinationTestScript - Entered Source Place : Bengaluru
 2022-02-06 18:54:52,562 [main] INFO stepdef.SourceAndDestinationTestScript - Browser launched & url opened
 2022-02-06 18:55:52,100 [main] INFO stepdef.SourceAndDestinationTestScript - Entered Source Place : Bengaluru
+2022-02-06 20:51:31,791 [main] INFO stepdef.SourceAndDestinationTestScript - Browser launched & url opened
+2022-02-06 20:54:26,569 [main] INFO stepdef.SourceAndDestinationTestScript - Browser launched & url opened
+2022-02-06 20:55:25,117 [main] INFO stepdef.SourceAndDestinationTestScript - Browser launched & url opened
+2022-02-06 20:56:25,234 [main] INFO stepdef.SourceAndDestinationTestScript - Entered Source Place : Bengaluru

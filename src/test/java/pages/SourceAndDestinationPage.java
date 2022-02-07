@@ -1,17 +1,8 @@
-package pages;
-//Importing packages
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
+package pages;//Importing packages
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
-
 import utilities.BaseClass;
 
 public class SourceAndDestinationPage extends BaseClass {
@@ -21,7 +12,7 @@ public class SourceAndDestinationPage extends BaseClass {
         this.driver = driver;
     }
 
-    // Storing required MakeMyTrip web elements
+    // Storing required MakeMyTrip home page web elements
     public static final By HANDLE_POPUP = By.xpath("//li[@class='makeFlex hrtlCenter font10 makeRelative lhUser userLoggedOut']");
     public static final By FROM = By.xpath("//input[@id='fromCity']");
     public static final By FROM_TEXT_FIELD = By.xpath("//input[@class='react-autosuggest__input react-autosuggest__input--open']");
@@ -30,13 +21,14 @@ public class SourceAndDestinationPage extends BaseClass {
     public static final By TO = By.xpath("//input[@id='toCity']");
     public static final By TO_TEXT_FIELD = By.xpath("//div[@class='react-autosuggest__container react-autosuggest__container--open']/input");
     public static final By LIST_ITEM_TO = By.xpath("(//div[@class='makeFlex hrtlCenter']/div/p[1])[position()=1]");
-
+    public static final By ROUND_TRIP = By.xpath("(//ul[@class='fswTabs latoBlack greyText']/li)[position()=2]");
 
 
     public void sendSourcePlace(String sourcePlace, WebDriver driver) {
         try {
             Thread.sleep(5000);
             driver.findElement(HANDLE_POPUP).click();
+            driver.findElement(ROUND_TRIP).click();
             waitForExpectedElement(driver, FROM);
             driver.findElement(FROM).click();
             Thread.sleep(5000);

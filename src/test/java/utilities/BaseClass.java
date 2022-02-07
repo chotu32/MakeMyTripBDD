@@ -10,6 +10,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -27,8 +28,19 @@ public class BaseClass {
         System.out.println("Framework Directory : " + frameworkDir);
         System.out.println("WebDriver Path : " + webDriverPath);
         System.out.println("Entered Base Class : " + url);
-        WebDriverManager.chromedriver().setup();
+
+        System.setProperty("webdriver.chrome.driver", webDriverPath);
+        //WebDriver driver = new ChromeDriver();
+
+        //DesiredCapabilities capabilities = new DesiredCapabilities();
+        //capabilities.setCapability("acceptInsecureCerts", true); // no dedicated method
+
+        //WebDriver driver = new ChromeDriver();
+
+        //WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
+        //driver = new ChromeDriver(capabilities);
+
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
@@ -38,7 +50,7 @@ public class BaseClass {
 
 
 
-    // Explicit wait method for element clickable
+    // Explicit wait method for element
     public WebElement waitForExpectedElement(WebDriver driver, final By locator) {
         WebDriverWait wait = new WebDriverWait(driver, 30);
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));

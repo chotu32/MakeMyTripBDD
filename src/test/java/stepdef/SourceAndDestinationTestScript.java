@@ -6,7 +6,6 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
 import org.junit.Assert;
 import pages.SourceAndDestinationPage;
 import utilities.BaseClass;
@@ -28,7 +27,7 @@ public class SourceAndDestinationTestScript extends BaseClass {
     @Before
     public void start( ) throws Exception{
         config.loadPropertyFile();
-        PropertyConfigurator.configure("./Log4j/log4j.properties");
+        //PropertyConfigurator.configure("./Log4j/log4j.properties");
     }
 
     @Given("user is already on makemytrip page")
@@ -40,8 +39,10 @@ public class SourceAndDestinationTestScript extends BaseClass {
     @When("user select source and destination")
     public void user_select_source_and_destination() {
         objSADP.sendSourcePlace(config.getProperty("from"), driver);
+        logger.info("Selected Source place");
         //Thread.sleep(5000);
         objSADP.sendDestinationPlace(config.getProperty("to"), driver);
+        logger.info("Selected Destination Place");
     }
     @Then("display source and destination on screen")
     public void display_source_and_destination_on_screen() {
@@ -52,7 +53,7 @@ public class SourceAndDestinationTestScript extends BaseClass {
         logger.info("Entered Source Place : " + source);
 
         String destination = objSADP.getTextFromDestination(driver);
-        Assert.assertEquals("Delhi", destination);
+        Assert.assertEquals(config.getProperty("to"), destination);
         //logs an info message with parameter
         logger.info("Entered Source Place : " + destination);
     }
