@@ -3,27 +3,29 @@ package stepdefmakemytripcomplete;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
-import pages.DepartureAndReturnPage;
-import pages.FlightPage;
-import pages.SourceAndDestinationPage;
-import pages.TravellersAndClassPage;
+import org.junit.Assert;
+import pages.*;
 import utilities.BaseClass;
 import utilities.ConfigClass;
 import utilities.UtilitiesClass;
 
 public class MakeMyTripCompleteScript extends BaseClass {
 
+    // Variable declaration
+    public static String adultsFee = null, childrensFee = null, totalAmount = null;
+
+
     // Object creation for page classes
     SourceAndDestinationPage objSADP = new SourceAndDestinationPage(driver);
     DepartureAndReturnPage objDARP = new DepartureAndReturnPage(driver);
     TravellersAndClassPage objTACP = new TravellersAndClassPage(driver);
     FlightPage objFP = new FlightPage(driver);
+    MoreFaresPage objMFP = new MoreFaresPage(driver);
+    CompleteYourBookingPage objCYBP = new CompleteYourBookingPage(driver);
 
     // Object creation for utilities classes
     ConfigClass config=new ConfigClass();
     UtilitiesClass objUtil = new UtilitiesClass();
-    BaseClass objBC = new BaseClass();
-
 
     @Before
     public void start( ) throws Exception{
@@ -33,6 +35,7 @@ public class MakeMyTripCompleteScript extends BaseClass {
     @Given("Given user is already on home page")
     public void given_user_is_already_on_home_page() {
         launchBrowser(config.getProperty("url"));
+        captureScreenshot(driver, "BrowserLaunched");
     }
     @When("user select source and destination")
     public void user_select_source_and_destination() {
@@ -69,13 +72,27 @@ public class MakeMyTripCompleteScript extends BaseClass {
         objFP.selectLowPriceArilines(driver);
         objFP.clickOnBookNowButton(driver);
     }
-    @Then("user navigate to paymentgate way page")
-    public void user_navigate_to_paymentgate_way_page() {
-       System.out.println("Build Script part is pending");
+
+    @When("user change Premium Flex from Economic class and click continue")
+    public void user_change_premium_flex_from_economic_class_and_click_continue() {
+        objMFP.selectPremiumFlex(driver);
+        objMFP.clickContinueBTN(driver);
+    }
+
+    @When("user click Fare Rules and take Airline Fee and MMT Fee for two hours to three days and sum it for Adults and Children and print Console")
+    public void user_click_fare_rules_and_take_airline_fee_and_mmt_fee_for_two_hours_to_three_days_and_sum_it_for_adults_and_children_and_print_console() {
+        totalAmount = objCYBP.clickViewFareRulesAndGetDetails(driver);
+    }
+
+    @Then("user take Total Amount and Validate and print Console")
+    public void user_take_total_amount_and_validate_and_print_console() {
+        System.out.println("Total Amount is : " + totalAmount);
+        Assert.assertEquals("₹ 39,982", totalAmount);
+        System.out.println("Total Amount " + totalAmount + " is verified successfully");
     }
 
     @After
     public void browser() throws Throwable {
-        driver.close();
+        driver.quit();
     }
 }

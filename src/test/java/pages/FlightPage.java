@@ -18,9 +18,10 @@ public class FlightPage extends BaseClass {
 
     public static final By SEARCH = By.xpath("//a[@class='primaryBtn font24 latoBold widgetSearchBtn ']");
     public static final By EXPAND_LIST = By.xpath("//span[@class='linkText pointer']");
-    public static final By FARE_LIST = By.xpath("//label[@class='makeFlex spaceBtwCenter appendBottom12 pointer ']/span");
+    //public static final By FARE_LIST = By.xpath("//label[@class='makeFlex spaceBtwCenter appendBottom12 pointer ']/span");
     public static final By LOW_FARE = By.xpath("(//label[@class='makeFlex spaceBtwCenter appendBottom12 pointer '])[position()=15]");
-    public static final By BOOK_NOW_BUTTON = By.xpath("//button[@id='bookbutton-RKEY:5777fa91-0a2f-47f2-bdcd-6adfd2e4a792:12_0~~~RKEY:5777fa91-0a2f-47f2-bdcd-6adfd2e4a792:61_0']");
+    //public static final By BOOK_NOW_BUTTON = By.xpath("//button[@id='bookbutton-RKEY:5777fa91-0a2f-47f2-bdcd-6adfd2e4a792:12_0~~~RKEY:5777fa91-0a2f-47f2-bdcd-6adfd2e4a792:61_0']");
+    public static final By BOOK_NOW_BUTTON = By.xpath("//button[text()='Book Now']");
 
     public void clickOnSearchButton(WebDriver driver) {
         try {
@@ -66,11 +67,12 @@ public class FlightPage extends BaseClass {
             waitForExpectedElement(driver, BOOK_NOW_BUTTON);
             Thread.sleep(5000);
             WebElement element = driver.findElement(BOOK_NOW_BUTTON);
-            Thread.sleep(5000);
+
             //driver.switchTo().frame(element);
             //Thread.sleep(5000);
             element.click();
-            element.submit();
+            Thread.sleep(5000);
+
 
         } catch (Exception e) {
             e.getMessage();

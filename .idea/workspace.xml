@@ -5,33 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cfb732ba-54f0-43f8-a6c7-1246e86958e8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Features/makemytrip.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Features/makemytripcompletetest.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/DepartureAndReturnPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/FlightPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/TravellersAndClassPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/stepdefmakemytrip/MakeMyTripTestScript.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/stepdefmakemytripcomplete/MakeMyTripCompleteScript.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/CompleteYourBookingPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/MoreFaresPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Config/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jshon_output/cucumber.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/junit-output/cucumber.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/application.html" beforeDir="false" afterPath="$PROJECT_DIR$/log/application.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/testlog.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/testlog.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/testlog1.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/testlog1.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/chromedriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/resources/chromedriver.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/SourceAndDestinationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/SourceAndDestinationPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepdef/SourceAndDestinationTestScript.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdef/SourceAndDestinationTestScript.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefinitions/WithdrawlSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/WithdrawlSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testrunner/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testrunner/TestRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Features/makemytripcompletetest.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Features/makemytripcompletetest.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/json_output/report.json" beforeDir="false" afterPath="$PROJECT_DIR$/json_output/report.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/junit-output/cucumber.xml" beforeDir="false" afterPath="$PROJECT_DIR$/junit-output/cucumber.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/DepartureAndReturnPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/DepartureAndReturnPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/FlightPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/FlightPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefmakemytripcomplete/MakeMyTripCompleteScript.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefmakemytripcomplete/MakeMyTripCompleteScript.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/utilities/BaseClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utilities/BaseClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/StepDef/SourceAndDestinationTestScript.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/StepDef/SourceAndDestinationTestScript.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/StepDefinitions/WithdrawlSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/StepDefinitions/WithdrawlSteps.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/SourceAndDestinationPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/SourceAndDestinationPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/testRunner/testRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/testRunner/testRunner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utilities/UtilitiesClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utilities/UtilitiesClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/DepartureAndReturnPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/DepartureAndReturnPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/FlightPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/FlightPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/stepdefmakemytripcomplete/MakeMyTripCompleteScript.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/stepdefmakemytripcomplete/MakeMyTripCompleteScript.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/utilities/BaseClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/utilities/BaseClass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output" beforeDir="false" afterPath="$PROJECT_DIR$/test-output" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/utilities/UtilitiesClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/utilities/UtilitiesClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +59,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../aniBDD" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -225,12 +218,40 @@
       <workItem from="1644130699616" duration="28959000" />
       <workItem from="1644171165043" duration="35116000" />
       <workItem from="1644229278283" duration="2793000" />
-      <workItem from="1644232111164" duration="12140000" />
+      <workItem from="1644232111164" duration="17356000" />
+      <workItem from="1644301198929" duration="665000" />
+      <workItem from="1644304323648" duration="22371000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/pages/CompleteYourBookingPage.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/pages/CompleteYourBookingPage.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/pages/CompleteYourBookingPage.java</url>
+          <line>67</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/pages/CompleteYourBookingPage.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

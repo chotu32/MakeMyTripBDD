@@ -16,8 +16,11 @@ public class DepartureAndReturnPage extends BaseClass {
     }
 
     // Storing required MakeMyTrip home page web elements
-    public static final By SELECT_DEPARTURE_DATE = By.xpath("(//div[@class='dateInnerCell']/p)[position()=15]");
-    public static final By SELECT_RETURN_DATE = By.xpath("(//div[@class='DayPicker-Week']/div)[position()=21]");
+    //public static final By SELECT_DEPARTURE_DATE = By.xpath("(//div[@class='dateInnerCell']/p)[position()=15]");
+
+    public static final By SELECT_DEPARTURE_DATE = By.xpath("(//p[text()='13'])[1]");
+    public static final By SELECT_RETURN_DATE = By.xpath("(//p[text()='19'])[1]");
+
     public static final By GET_DEPARTURE_DATE = By.xpath("//div[@class='fsw_inputBox dates inactiveWidget ']/label/p/span");
     public static final By GET_RETURN_DATE = By.xpath("//div[@class='fsw_inputBox dates reDates inactiveWidget  ']/label/p/span");
 
